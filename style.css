@@ -73,7 +73,7 @@ p:nth-of-type(even) {
 
 /* START BELOW THIS LINE */
 
-section#one {
+#one {
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
@@ -82,7 +82,7 @@ section#one {
     flex-direction: column-reverse;
 }
 
-section#two {
+#two {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -91,9 +91,14 @@ section#two {
     flex-direction: row-reverse;
 }
 
-section#three {
+#three {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    /* 10 */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* OR */
+    grid-template-columns: repeat(4, 1fr);
+    /* 11 */
     grid-auto-rows: 100px;
 }
 
