@@ -87,13 +87,11 @@ p:nth-of-type(even) {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* Bonus 2 */
-    flex-direction: row-reverse;
 }
 
 #three {
     display: grid;
-
+    
     /* 10 */
     /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     /* OR */
@@ -102,3 +100,65 @@ p:nth-of-type(even) {
     grid-auto-rows: 100px;
 }
 
+/* Bonus 2 */
+#orange {
+    order: 2;
+}
+
+#brown {
+    order: 1;
+}
+
+#purple {
+    order: 3;
+}
+
+/* Bonus 3 */
+
+#purple {
+    align-self: flex-end;
+}
+
+
+#brown {
+    align-self: flex-start;
+}
+
+/* Bonus 4 */
+#p-one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#p-two {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    /* OR */
+    /* grid-column: span 2/auto; */
+}
+#p-three {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    /* grid-row: span 2/auto; */
+}
+#p-four {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+#p-five {
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
+#p-six {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* No style needed for #p-seven because it defaults to just taking up a single row and column */
+#p-eight {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    /* OR */
+    /* grid-column: span 3/auto; */
+}
